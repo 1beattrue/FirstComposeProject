@@ -11,15 +11,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Greeting("Android")
+            UserInfo(name = "Aboba", age = 15)
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun UserInfo(name: String, age: Int) {
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = "Name: $name, Age: $age"
     )
 }
